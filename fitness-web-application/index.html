@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FitLife - Your Daily Fitness Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🏋️ FitLife</h1>
+    <p>Your personalized daily fitness companion</p>
+  </header>
+
+  <main>
+    <!-- Setup -->
+    <section class="setup">
+      <h2>👤 Create Your Fitness Plan</h2>
+      <label>Current Weight (kg): <input type="number" id="userWeight"></label>
+      <label>Target Weight (kg): <input type="number" id="targetWeight"></label>
+      <label>Daily Activity Level:
+        <select id="activityLevel">
+          <option value="low">Low (desk job)</option>
+          <option value="moderate">Moderate (walking, light workouts)</option>
+          <option value="high">High (daily intense exercise)</option>
+        </select>
+      </label>
+      <button onclick="generatePlan()">Generate My Tasks</button>
+    </section>
+
+    <!-- Daily Tasks -->
+    <section class="tasks">
+      <h2>📌 Today’s Challenges</h2>
+      <ul id="challengeList"></ul>
+    </section>
+
+    <!-- Progress Tracker -->
+    <section class="tracker">
+      <h2>📊 Track Your Day</h2>
+      <label>Water Drank (liters): <input type="number" id="waterInput"></label>
+      <label>Calories Eaten: <input type="number" id="calorieInput"></label>
+      <button onclick="logDay()">Log Progress</button>
+      <p id="daySummary"></p>
+    </section>
+
+    <!-- Motivation -->
+    <section class="motivation">
+      <h2>💡 Daily Motivation</h2>
+      <p id="quote"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 FitLife | Stay consistent, stay strong 🚀</p>
+  </footer>
+ 
+  <script src="app.js"></script>
+</body>
+</html>

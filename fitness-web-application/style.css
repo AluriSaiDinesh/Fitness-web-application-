@@ -1,0 +1,147 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Gradient overlay + background image */
+  background-image: linear-gradient(120deg, rgba(67,160,71,0.5), rgba(30,136,229,0.5)), url('download/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  background: linear-gradient(120deg, #43a047, #2e7d32);
+  color: white;
+  padding: 2rem 1rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ===== Main Layout ===== */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* ===== Sections ===== */
+section {
+  background: white;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+
+/* ===== Forms & Inputs ===== */
+label {
+  display: block;
+  margin: 0.8rem 0;
+  font-weight: 500;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: #43a047;
+  outline: none;
+  box-shadow: 0 0 6px rgba(67, 160, 71, 0.4);
+}
+
+/* ===== Buttons ===== */
+button {
+  background: linear-gradient(120deg, #43a047, #66bb6a);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: none;
+}
+
+button:hover {
+  background: linear-gradient(120deg, #2e7d32, #43a047);
+  transform: scale(1.02);
+}
+
+/* ===== Task List ===== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  background: #f1f8f5;
+  border-left: 5px solid #43a047;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+ul li:hover {
+  background: #e6f4ea;
+}
+
+/* ===== Motivation Quotes ===== */
+.motivation {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  background: #f9f9f9;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
