@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FitLife Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main style="max-width:400px; margin:5rem auto;">
+    <section class="suitcase-animated">
+      <h2>🔒 Login to FitLife</h2>
+      <p style="text-align:center; color:#2e7d32; font-weight:600; margin-bottom:1.5rem;">
+        <span style="font-size:1.1rem;">🎯 Goal: Unlock your personalized daily fitness journey!</span>
+      </p>
+      <form id="loginForm">
+        <label>Email:
+          <input type="email" id="email" required>
+        </label>
+        <label>Password:
+          <div style="position:relative;">
+            <input type="password" id="password" required style="padding-right:2.2rem;">
+            <span id="togglePassword" style="position:absolute; right:8px; top:50%; transform:translateY(-50%); cursor:pointer; font-size:1.3rem; color:#43a047;">
+              👁️
+            </span>
+          </div>
+        </label>
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginMessage" style="color:#d32f2f; margin-top:1rem;"></p>
+    </section>
+  </main>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      if(email && password) {
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('loginMessage').textContent = 'Please enter both email and password.';
+      }
+    });
+
+    // Show/hide password functionality with eye icon
+    const pwd = document.getElementById('password');
+    const toggle = document.getElementById('togglePassword');
+    toggle.addEventListener('click', function() {
+      if (pwd.type === 'password') {
+        pwd.type = 'text';
+        toggle.textContent = '🙈';
+      } else {
+        pwd.type = 'password';
+        toggle.textContent = '👁️';
+      }
+    });
+  </script>
+</body>
+</html>
